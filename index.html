@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Base styles for the body */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Navigation bar styles */
+        .navbar {
+            display: flex;
+            align-items: center;
+            background-color: rgb(61, 127, 136);
+            padding: 1em;
+            border-radius: 0 0 1em 1em;
+        }
+
+        /* Logo/Image in the nav bar */
+        .navbar img {
+            width: 50px; /* Keep the logo size */
+            height: auto;
+            margin-right: 2em; /* Space between logo and menu items */
+        }
+        
+        /* Style for menu items */
+        .nav-item {
+            position: relative;
+            margin-right: 2em;
+        }
+
+        .nav-item a {
+            text-decoration: none;
+            color: rgb(176, 252, 255);
+            font-weight: bold;
+            padding: 0.5em 1em;
+            border: 0.15em solid transparent;
+            transition: all 0.3s;
+            border-radius: 0.5em;
+        }
+
+        /* Styles for dropdown menu */
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: rgb(61, 127, 136);
+            box-shadow: 0 0 0.5em rgb(176, 252, 255);
+            border-radius: 0.5em;
+            z-index: 1;
+        }
+
+        .nav-item:hover .dropdown-menu {
+            display: block;
+        }
+
+        .dropdown-item {
+            padding: 0.5em 1em;
+            text-decoration: none;
+            color: rgb(176, 252, 255);
+            transition: background-color 0.3s;
+            display: block;
+        }
+
+        /* Hover effects */
+        .nav-item a:hover, 
+        .dropdown-item:hover {
+            background-color: rgb(206, 255, 255);
+            color: rgb(61, 127, 136);
+            border: 0.15em solid rgb(176, 252, 255);
+            box-shadow: 0 0 1em 0.25em rgb(176, 252, 255);
+            text-shadow: 0 0 0.5em rgb(176, 252, 255);
+        }
+    </style>
+    <title>Navigation Bar with Dropdown Menu</title>
+</head>
+<body>
+
+    <nav class="navbar">
+        <img src="tailwind.jpg" alt="Logo"> <!-- Permanent image -->
+        
+        <div class="nav-item">
+            <a href="#">Home</a>
+            <div class="dropdown-menu">
+                <a href="#" class="dropdown-item">Welcome</a>
+                <a href="#" class="dropdown-item">Our Story</a>
+                <a href="#" class="dropdown-item">Latest News</a>
+                <a href="#" class="dropdown-item">Updates</a>
+                <a href="#" class="dropdown-item">Events</a>
+                <a href="#" class="dropdown-item">FAQ</a>
+                <a href="#" class="dropdown-item">Get Started</a>
+                <a href="#" class="dropdown-item">Resources</a>
+                <a href="#" class="dropdown-item">Community</a>
+                <a href="#" class="dropdown-item">Newsletter</a>
+            </div>
+        </div>
+        
+        <div class="nav-item">
+            <a href="#">Services</a>
+            <div class="dropdown-menu">
+                <a href="#" class="dropdown-item">Consulting</a>
+                <a href="#" class="dropdown-item">Development</a>
+                <a href="#" class="dropdown-item">Design</a>
+                <a href="#" class="dropdown-item">Marketing</a>
+                <a href="#" class="dropdown-item">Support</a>
+                <a href="#" class="dropdown-item">Training</a>
+                <a href="#" class="dropdown-item">Outsourcing</a>
+                <a href="#" class="dropdown-item">Analysis</a>
+                <a href="#" class="dropdown-item">Management</a>
+                <a href="#" class="dropdown-item">Implementation</a>
+            </div>
+        </div>
+
+        <div class="nav-item">
+            <a href="#">About</a>
+            <div class="dropdown-menu">
+                <a href="#" class="dropdown-item">Our Mission</a>
+                <a href="#" class="dropdown-item">The Team</a>
+                <a href="#" class="dropdown-item">History</a>
+                <a href="#" class="dropdown-item">Vision</a>
+                <a href="#" class="dropdown-item">Values</a>
+                <a href="#" class="dropdown-item">Careers</a>
+                <a href="#" class="dropdown-item">Partners</a>
+                <a href="#" class="dropdown-item">Press</a>
+                <a href="#" class="dropdown-item">Certifications</a>
+                <a href="#" class="dropdown-item">Work with Us</a>
+            </div>
+        </div>
+
+        <div class="nav-item">
+            <a href="#">Projects</a>
+            <div class="dropdown-menu">
+                <a href="#" class="dropdown-item">Project Alpha</a>
+                <a href="#" class="dropdown-item">Project Beta</a>
+                <a href="#" class="dropdown-item">Project Gamma</a>
+                <a href="#" class="dropdown-item">Project Delta</a>
+                <a href="#" class="dropdown-item">Project Epsilon</a>
+                <a href="#" class="dropdown-item">Project Zeta</a>
+                <a href="#" class="dropdown-item">Project Eta</a>
+                <a href="#" class="dropdown-item">Project Theta</a>
+                <a href="#" class="dropdown-item">Project Iota</a>
+                <a href="#" class="dropdown-item">Project Kappa</a>
+            </div>
+        </div>
+
+        <div class="nav-item">
+            <a href="#">Blog</a>
+            <div class="dropdown-menu">
+                <a href="#" class="dropdown-item">Latest Trends</a>
+                <a href="#" class="dropdown-item">How-To Guides</a>
+                <a href="#" class="dropdown-item">Case Studies</a>
+                <a href="#" class="dropdown-item">Interviews</a>
+                <a href="#" class="dropdown-item">Opinion Pieces</a>
+                <a href="#" class="dropdown-item">Tips & Tricks</a>
+                <a href="#" class="dropdown-item">Industry News</a>
+                <a href="#" class="dropdown-item">Tutorials</a>
+                <a href="#" class="dropdown-item">Resource Lists</a>
+                <a href="#" class="dropdown-item">Webinars</a>
+            </div>
+        </div>
+
+        <div class="nav-item">
+            <a href="#">Gallery</a>
+            <div class="dropdown-menu">
+                <a href="#" class="dropdown-item">Photos</a>
+                <a href="#" class="dropdown-item">Videos</a>
+                <a href="#" class="dropdown-item">Events</a>
+                <a href="#" class="dropdown-item">Projects</a>
+                <a href="#" class="dropdown-item">Team Building</a>
+                <a href="#" class="dropdown-item">Celebrations</a>
+                <a href="#" class="dropdown-item">Behind the Scenes</a>
+                <a href="#" class="dropdown-item">Adventures</a>
+                <a href="#" class="dropdown-item">Highlights</a>
+                <a href="#" class="dropdown-item">Social Media Posts</a>
+            </div>
+        </div>
+
+        <div class="nav-item">
+            <a href="#">Testimonials</a>
+            <div class="dropdown-menu">
+                <a href="#" class="dropdown-item">John Doe - CEO of Company A</a>
+                <a href="#" class="dropdown-item">Mary Smith - Project Manager at Company B</a>
+                <a href="#" class="dropdown-item">Alex Johnson - Director at Company C</a>
+                <a href="#" class="dropdown-item">Lisa Brown - Lead Designer at Company D</a>
+                <a href="#" class="dropdown-item">Michael Wilson - Marketing Head at Company E</a>
+                <a href="#" class="dropdown-item">Emily Davis - Product Owner at Company F</a>
+                <a href="#" class="dropdown-item">David Lee - Client at Company G</a>
+                <a href="#" class="dropdown-item">Patricia White - Founder of Company H</a>
+                <a href="#" class="dropdown-item">James Harris - Investor at Company I</a>
+                <a href="#" class="dropdown-item">Sarah Martin - Freelance Consultant</a>
+            </div>
+        </div>
+
+        <div class="nav-item">
+            <a href="#">Careers</a>
+            <div class="dropdown-menu">
+                <a href="#" class="dropdown-item">Job Openings</a>
+                <a href="#" class="dropdown-item">Internships</a>
+                <a href="#" class="dropdown-item">Employee Benefits</a>
+                <a href="#" class="dropdown-item">Company Culture</a>
+                <a href="#" class="dropdown-item">How to Apply</a>
+                <a href="#" class="dropdown-item">Equal Opportunity</a>
+                <a href="#" class="dropdown-item">Team Profiles</a>
+                <a href="#" class="dropdown-item">Testimonials</a>
+                <a href="#" class="dropdown-item">Career Events</a>
+                <a href="#" class="dropdown-item">Career Development</a>
+            </div>
+        </div>
+
+        <div class="nav-item">
+            <a href="#">Contact</a>
+            <div class="dropdown-menu">
+                <a href="#" class="dropdown-item">Customer Support</a>
+                <a href="#" class="dropdown-item">Technical Support</a>
+                <a href="#" class="dropdown-item">Feedback</a>
+                <a href="#" class="dropdown-item">Partnership Inquiries</a>
+                <a href="#" class="dropdown-item">General Questions</a>
+                <a href="#" class="dropdown-item">Location</a>
+                <a href="#" class="dropdown-item">Contact Form</a>
+                <a href="#" class="dropdown-item">Response Time</a>
+                <a href="#" class="dropdown-item">Connect with Us</a>
+                <a href="#" class="dropdown-item">Privacy Policy</a>
+            </div>
+        </div>
+
+        <div class="nav-item">
+            <a href="#">Support</a>
+            <div class="dropdown-menu">
+                <a href="#" class="dropdown-item">Help Center</a>
+                <a href="#" class="dropdown-item">Documentation</a>
+                <a href="#" class="dropdown-item">FAQs</a>
+                <a href="#" class="dropdown-item">User Guides</a>
+                <a href="#" class="dropdown-item">Support Tickets</a>
+                <a href="#" class="dropdown-item">Live Chat</a>
+                <a href="#" class="dropdown-item">Community Forums</a>
+                <a href="#" class="dropdown-item">Getting Started</a>
+                <a href="#" class="dropdown-item">Feedback and Suggestions</a>
+                <a href="#" class="dropdown-item">System Status</a>
+            </div>
+        </div>
+        
+    </nav>
+
+</body>
+</html>
